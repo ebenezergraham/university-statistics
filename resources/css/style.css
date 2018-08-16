@@ -501,8 +501,6 @@ table.university-list {
     display: none;
 }
 
-/*Ripple Effect*/
-
 /*Media queries to make the website response for mobile phones*/
 @media screen and (max-width: 480px) {
     .navbar {

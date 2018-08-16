@@ -71,23 +71,6 @@ $(function () {
     });
 });
 
-$('#back-drop').ripples({
-    // Image Url
-    imageUrl: null,
-    // The width and height of the WebGL texture to render to.
-    // The larger this value, the smoother the rendering and the slower the ripples will propagate.
-    resolution: 256,
-    // The size (in pixels) of the drop that results by clicking or moving the mouse over the canvas.
-    dropRadius: 10,
-    // Basically the amount of refraction caused by a ripple.
-    // 0 means there is no refraction.
-    perturbance: 0.1,
-    // Whether mouse clicks and mouse movement triggers the effect.
-    interactive: true,
-    // The crossOrigin attribute to use for the affected image.
-    crossOrigin: ''
-});
-
 //hide and how social media bar
 $(document).ready(function () {
     $(window).bind('scroll', function () {
@@ -120,6 +103,7 @@ $('#data').ready(function () {
 });
 
 $('#statistics-data').ready(function () {
+    console.log(window.location.pathname)
     if (window.location.pathname == "/universtas/statictics.html") {
         var country = sessionStorage.getItem("countrycode");
         var programme = sessionStorage.getItem("programme");
