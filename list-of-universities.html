@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> List of Universities </title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="vendor/css/normalize.css">
+    <link rel="stylesheet" href="vendor/css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="social-media" id="top">
+    <i class="fa fa-bars icon" onclick="toggle()"><span>Menu</span></i>
+    <p id="top-msg">+230 58409206 | egraha203@caledonian.ac.uk
+        <span>
+    Follow
+    <a href="https://www.facebook.com/ebenezerkagraham"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/ebenezergraham"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://www.instagram.com/ebenezergraham"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/ebenezergraham"><i class="fab fa-linkedin"></i></a>
+
+    </span>
+    </p>
+    <div>
+
+    </div>
+</div>
+
+<nav class="navbar">
+    <i class="fa fa-university"><span>Universitas</span> </i>
+    <a href="index.html">Home</a>
+    <a href="index.html">Countries</a>
+    <a href="#" class="active">Universities</a>
+    <a href="about-us.html">About Us</a>
+</nav>
+
+<main class="mainview">
+
+
+    <div class="titleheader"><h2 class="heading"><span id="current-country"></span> | List of Universities</h2></div>
+    <div class="row ">
+
+        <section class="col span-1-of-6 box list-img" id="quick-links">
+            <h2 class="heading">Countries</h2>
+            <figure class="country-photo">
+                <img src="resources/img/flags/uk.png" alt="UK Image">
+                <ul><li><a onclick="displayUniversities(UK)">United Kingdom</a></li></ul>
+                <br>
+            </figure>
+
+            <figure class="country-photo">
+                <img src="resources/img/flags/mauritius.png" alt="Mauritius Image">
+                <ul><li><a onclick="displayUniversities(MAURITIUS)">Mauritius</a></li></ul>
+                <br>
+            </figure>
+
+            <figure class="country-photo">
+                <img src="resources/img/flags/ghana.png" alt="Ghana Image">
+                <ul><li><a onclick="displayUniversities(GHANA)">Ghana</a></li></ul>
+            </figure>
+        </section>
+        <section class="col span-4-of-6 " id="listing">
+            <h2 class="heading">List of Universities</h2>
+            <div id="data"></div>
+        </section>
+
+    </div>
+
+</main>
+<script id="list-universities-template" type="text/x-handlebars-template">
+    <table class="university-list">
+        {{#each objects}}
+        <tr>
+            <td class="uni-list-item">{{name}}</td>
+            <td><a href="{{web_pages}}" class="btn btn-full">Visit Website</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+
+<footer class="footer" id="section-footer">
+    <div class="row ">
+        <div class="col span-1-of-2 box">
+            <h2 class="heading">About Us</h2>
+            <p>
+                We try to present to you all college or university available in Mauritius, the united kingdom and Ghana.
+                Also, we show your the percentages of student enrollment
+            </p>
+            <a class="btn btn-full" href="about-us.html">Learn More</a>
+        </div>
+
+        <div class="col span-1-of-2 box">
+            <h2 class="heading">Contact Us</h2>
+            <p>
+                The African Leadership University,<br>
+                Power Mill Road<br>
+                Pamplemousses, 21001<br>
+                Mauritius<br>
+            </p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            <span> Web Development Technologies Coursework.</span> Copyright 2018 - Ebenezer K. A. Graham
+        </p>
+    </div>
+    <script src="vendor/js/handlebars.min.js"></script>
+    <script src="resources/js/script.js"></script>
+</footer>
+</body>
+</html>
